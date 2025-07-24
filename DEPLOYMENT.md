@@ -40,3 +40,21 @@ If the deployment fails:
 3. Verify that the workflow has the necessary permissions
 
 The deployment workflow uses the latest GitHub Actions for Pages deployment, ensuring compatibility and security.
+
+## Custom Domain Setup
+
+To use a custom domain (like one from GoDaddy):
+
+1. **Add your domain to the repository:**
+   - Rename `CNAME.example` to `CNAME`
+   - Edit the file to contain your domain (e.g., `yourdomain.com` or `www.yourdomain.com`)
+   - Commit and push the change
+
+2. **Configure your domain provider:**
+   - See `GODADDY_SETUP.md` for detailed GoDaddy instructions
+   - For other providers, add CNAME or A records pointing to GitHub Pages
+
+3. **Enable in GitHub Pages settings:**
+   - Go to Settings → Pages
+   - Enter your custom domain
+   - Save and enable HTTPS after DNS propagates

@@ -272,12 +272,6 @@
                 </div>
                 <div class="stat-label">Open Issues</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-value" id="watchers">
-                    <span class="loading">Loading...</span>
-                </div>
-                <div class="stat-label">Watchers</div>
-            </div>
         </div>
 
         <!-- Features -->
@@ -342,14 +336,12 @@
                 document.getElementById('stars').innerHTML = formatNumber(data.stargazers_count);
                 document.getElementById('forks').innerHTML = formatNumber(data.forks_count);
                 document.getElementById('issues').innerHTML = formatNumber(data.open_issues_count);
-                document.getElementById('watchers').innerHTML = formatNumber(data.watchers_count);
             } catch (error) {
                 console.error('Error fetching GitHub stats:', error);
                 // Set fallback values
                 document.getElementById('stars').innerHTML = 'N/A';
                 document.getElementById('forks').innerHTML = 'N/A';
                 document.getElementById('issues').innerHTML = 'N/A';
-                document.getElementById('watchers').innerHTML = 'N/A';
             }
         }
 
